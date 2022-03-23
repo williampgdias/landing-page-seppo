@@ -5,5 +5,28 @@ let text = document.getElementById('woman');
 window.addEventListener('scroll', function() {
     var value = scrollY;
 
-    text.style.top = value * 0.15 + 'px';
+    text.style.bottom = value * 0.1 + 'px';
 })
+
+
+// Button to the top
+
+//Get the button:
+const btnScroll = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btnScroll.style.display = "block";
+    } else {
+        btnScroll.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
