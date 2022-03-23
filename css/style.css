@@ -263,11 +263,29 @@ body {
 }
 
 .carousel {
+    display: flex;
+    align-items: center;
     height: 500px;
+    color: rgb(116, 116, 116);
 }
 
 .carousel-item {
-    padding: 90px;
+    padding: 30px 100px;
+}
+
+.carousel-control-next{
+    right: 10px;
+}
+
+.carousel-control-next, 
+.carousel-control-prev {
+    display: block;
+    position: relative;
+    top: 0px;
+    bottom: 0;
+    width: 4%;
+    padding: 5px 10px;
+    margin-right: 25px;
 }
 
 .carousel-item .quotes {
